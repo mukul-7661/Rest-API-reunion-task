@@ -4,8 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN yarn
+RUN npm install
 
 COPY . .
 
-RUN yarn test
+CMD ["node", "index.js"]
